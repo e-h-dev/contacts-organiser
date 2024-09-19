@@ -1,6 +1,6 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
 
 # Create your views here.
 
-def first_name(request):
-    return HttpResponse("First name: Eli Hammond")
+def contacts_list(request):
+    return render(request, 'contacts/contacts_list.html')
