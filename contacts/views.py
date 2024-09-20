@@ -4,3 +4,7 @@ from django.shortcuts import render
 
 def contacts_list(request):
     return render(request, 'contacts/contacts_list.html')
+
+
+def log_in(request):
+    return render(request, 'contacts/login.html')
