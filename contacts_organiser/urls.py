@@ -19,6 +19,6 @@ from contacts.views import contacts_list, log_in
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('contacts_list/', contacts_list, name='contacts_list'),
     path('', log_in, name='login'),
+    path('contacts_list/', contacts_list, name='contacts_list'),
 ]

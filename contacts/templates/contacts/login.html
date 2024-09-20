@@ -7,7 +7,8 @@
 </head>
 <body>
     <h1>Log In</h1>
-    <form action="">
+    <form action="/contacts_list/" method="POST">
+        {% csrf_token %}
         <p>
             <label for="user_name">Username</label>
             <input type="text" name="user_name">
@@ -17,7 +18,7 @@
             <input type="password" name="password">
         </p>
         <p>
-            <button>Log in</button>
+            <button type="submit">Log in</button>
         </p>
     </form>
 </body>
