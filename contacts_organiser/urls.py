@@ -20,6 +20,7 @@ from contacts.views import contacts_list, sign_in
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
-    path('', sign_in, name='sign_in'),
-    path('contacts_list/', contacts_list, name='contacts_list'),
+    path('', include('home.urls')),
+    # path('', sign_in, name='sign_in'),
+    # path('contacts_list/', contacts_list, name='contacts_list'),
 ]
