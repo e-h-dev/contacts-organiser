@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from contacts.views import contacts_list, sign_in
+from home.views import index, add_contact
 from . import views
 
 urlpatterns = [

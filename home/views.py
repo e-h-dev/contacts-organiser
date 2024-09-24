@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .form import FormContactItem
 
 # Create your views here.
@@ -13,7 +13,7 @@ def add_contact(request):
         form = FormContactItem(request.POST)
         if form.is_valid():
             form.save()
-        return redirect('index')
+        return redirect('home')
     form = FormContactItem()
     context = {
         'form': form
