@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Item
 from .form import FormContactItem
 
@@ -28,3 +28,9 @@ def add_contact(request):
         'form': form
     }
     return render(request, 'home/add_contact.html', context)
+
+
+def delete_contact(request, item_id):
+    contact = get_object_or_404(Item, id=item_id)
+    contact.delete()
+    return redirect('home')
