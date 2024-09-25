@@ -1,0 +1,7 @@
+
+.logo{
+    background: url('/media/contacts-organiser-logo.png') no-repeat center;
+    background-size: cover;
+    height:200px;
+    width:200px;
+}
