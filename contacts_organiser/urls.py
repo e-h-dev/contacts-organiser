@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from contacts.views import contacts_list, sign_in
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,4 +25,4 @@ urlpatterns = [
     path('', include('home.urls')),
     # path('', sign_in, name='sign_in'),
     # path('contacts_list/', contacts_list, name='contacts_list'),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
